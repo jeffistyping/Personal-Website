@@ -1,47 +1,21 @@
 {
-    "title": "Freelancer",
-    "name": "startbootstrap-freelancer",
-    "version": "4.1.1",
-    "description": "A freelancer portfolio HTML theme for Bootstrap.",
+    "title": "Lincoln's Website",
+    "name": "website",
+    "version": "1.0.0",
+    "description": "Lincoln Lo's Personal Website",
     "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
+        "Lincoln Lo"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/freelancer",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer/issues",
-        "email": "feedback@startbootstrap.com"
-    },
+    "homepage": "https://github.com/Lincoln23/Personal-Website",
     "license": "MIT",
-    "author": "Start Bootstrap",
-    "contributors": [
-        "David Miller (http://davidmiller.io/)"
-    ],
+    "author": "Lincoln Lo",
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
+        "url": "https://github.com/Lincoln23/Personal-Website.git"
     },
     "dependencies": {
-        "bootstrap": "^4.1.3",
-        "font-awesome": "*",
-        "jquery": "*",
         "jquery.easing": "*",
-        "lodash": "^4.17.10",
         "magnific-popup": "*",
         "typed.js": "*"
-    },
-    "devDependencies": {
-        "browser-sync": "^2.24.6",
-        "gulp": "^4.0.0",
-        "gulp-clean-css": "^3.10.0",
-        "gulp-filter": "*",
-        "gulp-header": "*",
-        "gulp-rename": "^1.4.0",
-        "gulp-sass": "*",
-        "gulp-uglify": "^3.0.1"
     }
 }
