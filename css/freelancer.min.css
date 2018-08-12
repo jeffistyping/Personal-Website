@@ -2,7 +2,7 @@ body {
   font-family: Lato
 }
 
-#typed{
+#typed {
   display: inline;
 }
 
@@ -16,8 +16,7 @@ h6 {
   font-family: Montserrat
 }
 
-hr.star-dark,
-hr.star-light {
+hr.code-dark{
   max-width: 25rem;
   padding: 0;
   text-align: center;
@@ -53,14 +52,14 @@ hr.line2-light {
   margin-right: auto
 }
 
-hr.star-dark:after,
-hr.star-light:after {
+hr.code-dark:after{
+  content: "\f121";
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
   position: relative;
   top: -.8em;
   display: inline-block;
   padding: 0 .25em;
-  content: '\f121';
-  font-family: FontAwesome;
   font-size: 2em
 }
 
@@ -75,21 +74,14 @@ hr.finisher:after {
 }
 
 
-hr.star-light {
-  border-color: #e0e0e0
-}
 
-hr.star-light:after {
-  color: #e0e0e0;
-}
-
-hr.star-dark {
+hr.code-dark {
   border-color: #2c3e50
 }
 
-hr.star-dark:after {
+hr.code-dark:after {
   color: #2c3e50;
-  background-color: #e0e0e0 
+  background-color: #e0e0e0
 }
 
 section {
@@ -155,7 +147,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #2c3e50
+  color: #e0e0e0
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active,
@@ -164,7 +156,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #2c3e50
+  color: #e0e0e0
 }
 
 #mainNav .navbar-toggler {
@@ -247,7 +239,6 @@ header.masthead h2 {
 }
 
 .portfolio .portfolio-item {
-
   position: relative;
   display: block;
   max-width: 25rem;
@@ -362,7 +353,7 @@ header.masthead h2 {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #18bc9c
+  color: #2c3e50
 }
 
 form .row:first-child .floating-label-form-group {
@@ -376,19 +367,18 @@ form .row:first-child .floating-label-form-group {
   color: #fff
 }
 
-
 .copyright {
   background-color: #1a252f
 }
 
 a {
-  color: #18bc9c
+  color: #2c3e50
 }
 
 a:active,
 a:focus,
 a:hover {
-  color: #128f76
+  color: #2c3e50
 }
 
 .btn {
@@ -396,7 +386,7 @@ a:hover {
 }
 
 .bg-primary {
-  background-image: url(../img/Mountains.png)!important
+  background-image: url(../img/Mountains.png) !important
 }
 
 .bg-primary2 {
