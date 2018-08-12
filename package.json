@@ -30,6 +30,7 @@
         "font-awesome": "*",
         "jquery": "*",
         "jquery.easing": "*",
+        "lodash": "^4.17.10",
         "magnific-popup": "*",
         "typed.js": "*"
     },
