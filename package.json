@@ -15,6 +15,7 @@
     },
     "dependencies": {
         "jquery.easing": "*",
+        "jshint": "^2.9.6",
         "magnific-popup": "*",
         "typed.js": "*"
     }
