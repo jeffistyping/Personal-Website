@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="vendor/magnific-popup/magnific-popup.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
     <link href="css/css.min.css" rel="stylesheet">
@@ -142,23 +142,22 @@
             <div class="row">
                 <div class="col-lg-4 ml-auto">
                     <p class="lead">
-                        <strong>Hey there!</strong> My full name is
-                        <br> Tsz Seng Lincoln Lo, However everyone calls me Lincoln. I am a student at the
-                        <strong>University of Waterloo</strong> studying
-                        <strong>Computer Engineering</strong>
+                        My full name is Tsz Seng Lincoln Lo, However I go by Lincoln Lo. I am a
+                        <strong>Computer Engineering</strong> student at the
+                        <strong>University of Waterloo</strong>
                     </p>
                 </div>
                 <div class="col-lg-4 mr-auto">
                     <p class="lead">
-                        <strong>A little about me: </strong>I am a passionate software developer who is experinced with creating
-                        <strong>APIs, Android Apps, and Websites</strong>I am most experinced with
-                        <strong>Java, Node.js, MySql,</strong> However, I do know many more languages </p>
+                        I am passionate about building excellent software that improves the lives of those around me.
+                        <br> When I'm not coding, you'll find me running on a mountain, working-out or just going for a nice
+                        walk by the lake. </p>
                 </div>
             </div>
             <div class="text-center mt-4">
                 <a class="btn btn-xl btn-outline-light" href="#">
                     <i class="far fa-file-pdf mr-2 "></i>
-                    My Resume!
+                    Resume
                 </a>
             </div>
         </div>
@@ -171,8 +170,6 @@
             <hr class="code-dark mb-5">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
@@ -237,11 +234,6 @@
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/Lolincoln23" target="_blank">
-                                <i class="fab fa-facebook-square"></i>
-                            </a>
-                        </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -252,9 +244,9 @@
     </footer>
     <div class="copyright py-4 text-center text-white">
         <div class="container">
-          <small>Copyright &copy; Lincoln Lo 2018</small>
+            <small>Copyright &copy; Lincoln Lo 2018</small>
         </div>
-      </div>
+    </div>
 
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
@@ -275,12 +267,17 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h2 class="text-secondary text-uppercase mb-0">Data Integartion</h2>
+                        <h2 class="text-secondary text-uppercase mb-0">Data Integration</h2>
                         <hr class="code-dark mb-5">
                         <img class="img-fluid mb-5" src="img/portfolio/DataIntegration.png " alt="Data Integration Project">
-                        <p class="mb-5">A Data-Integration system that allows users to seamlessly Authroize with OAuth2.0 by simply logging
-                            in and pulling data from 10+ serviers (i.e. Salesforce, xero, quickbooks,hubspot) and store it
-                            into one localized database for easier analyzisis of data</p>
+                        <p class="mb-5">A Data Integration system that handles authorization and refreshing of OAuth2.0 tokens, which allows
+                            multiple users to fetch data from 10+ services (i.e. Salesforce, Xero, Quickbooks, Hubspot etc...)
+                            on a set schedule. The data is then stored into one localized database for easier analysis
+                            <br>
+                            <a class="color-hover" href="https://github.com/Lincoln23/Data-Integration" target="_blank">
+                                <strong>Check it Out!</strong>
+                            </a>
+                        </p>
                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                             <i class="far fa-times-circle mr-2"></i>
                             Close Project</a>
@@ -302,9 +299,14 @@
                         <h2 class="text-secondary text-uppercase mb-0">Fast Chat</h2>
                         <hr class="code-dark mb-5">
                         <img class="img-fluid mb-5" src="img/portfolio/code.PNG" alt="">
-                        <p class="mb-5">The backend REST API powering a chat bot which analyzises user's input and queries a database to
-                            return relevent information. This is built with Java using Spring Boot, AWS Comprehend and hosted
-                            on AWS EC2 and RDS servers</p>
+                        <p class="mb-5">A REST API powering a chat bot which analyzes user's input and queries a database to return relevant
+                            information. This is built with Java using Spring Boot, AWS Comprehend and hosted on AWS EC2
+                            and RDS servers
+                            <br>
+                            <a class="color-hover" href="https://github.com/Lincoln23/FastChat" target="_blank">
+                                <strong>Check it Out!</strong>
+                            </a>
+                        </p>
                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                             <i class="far fa-times-circle mr-2"></i>
                             Close Project</a>
@@ -333,7 +335,7 @@
                             <br>
                             <strong>To use: </strong>Click on the images to select which options you would like to find.
                             <br>
-                            <a href="https://lincoln23.github.io/" target="_blank">
+                            <a class="color-hover" href="https://lincoln23.github.io/" target="_blank">
                                 <strong>Check it Out!</strong>
                             </a>
                         </p>
@@ -362,7 +364,7 @@
                             <strong>OpenWeatherMap’s API</strong> that gathers the current weather information of any city in the
                             world. The app will inform the user if the weather is suitable for a run based on their preferences.
                             <br>
-                            <a href="github.com/Lincoln23/WeatherRun" target="_blank">
+                            <a class="color-hover" href="https://github.com/Lincoln23/WeatherRun" target="_blank">
                                 <strong>Check it Out on Github!</strong>
                             </a>
                         </p>
@@ -394,7 +396,7 @@
                             sensor detects pressure, it will check if the input matches the saved pattern. If the inputted
                             pattern matches, the motor will be activated and unlock the door.
                             <br>
-                            <a href="https://lincoln23.github.io/" target="_blank">
+                            <a class="color-hover" href="https://github.com/Lincoln23/PressureLock" target="_blank">
                                 <strong>Check it Out!</strong>
                             </a>
                         </p>
@@ -419,12 +421,12 @@
                         <h2 class="text-secondary text-uppercase mb-0">5km to 42.2Km</h2>
                         <hr class="finisher mb-5">
                         <img class="img-fluid mb-5" src="img/portfolio/running2.png" alt="">
-                        <p class="mb-5">I was never the comfortable with running and the summer of 2016 I wanted to challenge myself with
-                            the goal of completing a full marathon at the end. I committed to training twice a week with
-                            a race on the weekend. By May 6 I complete the Vancouver Marathon and by the end of the challenge,
+                        <p class="mb-5">I was never comfortable with running and the summer of 2016 I wanted to challenge myself with the
+                            goal of completing a full marathon at the end. I committed to training 6 times a week with a
+                            race on the weekend. By May 6 I complete the Vancouver Marathon and by the end of the challenge,
                             I ran a total of 30 races which includes road running, trail running and obstacle courses.
                             <br>
-                            <a href="https://photos.google.com/share/AF1QipOjFaRbu8bfOM-zP-gLlpXHkbP4c6Gh_RBgkqpQ9QkZn9ynQ8y4HZ57H43206l4GQ?key=U211UWtXNlJOXy1JN1NNeGdwOENjMkRjQ1RsZW5n"
+                            <a class="color-hover" href="https://photos.google.com/share/AF1QipOjFaRbu8bfOM-zP-gLlpXHkbP4c6Gh_RBgkqpQ9QkZn9ynQ8y4HZ57H43206l4GQ?key=U211UWtXNlJOXy1JN1NNeGdwOENjMkRjQ1RsZW5n"
                                 target="_blank">View All the runs I did!</a>
                         </p>
                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
@@ -467,14 +469,14 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="js/jqBootstrapValidation.min.js"></script>
+    <script src="js/contact_me.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/javascript.min.js"></script>
     <!-- Typed.js-->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <script src="js/type.js"></script>
+    <script src="js/type.min.js"></script>
 
 
 </body>
