@@ -1,18 +1,44 @@
 <?php
-// Check for empty fields
-if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-  http_response_code(500);
-  exit();
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
+$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+try {
+    //Server settings
+    // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    // $mail->isSMTP();                                      // Set mailer to use SMTP
+    // $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
+    // $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    // $mail->Username = 'user@example.com';                 // SMTP username
+    // $mail->Password = 'secret';                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
+
+    //Recipients
+    $mail->setFrom('Lolincoln23@gmail.com', 'Personal Website');
+    $mail->addAddress('Lolincoln23@gmail.com');     // Add a recipient
+    // $mail->addReplyTo('info@example.com', 'Information');
+    // $mail->addCC('cc@example.com');
+    // $mail->addBCC('bcc@example.com');
+
+    //Attachments
+    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+
+    $body = '<p><strong>This is my first</strong> Php mailer</p>';
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = $body;
+    $mail->AltBody = strip_tags($body);
+
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$email = strip_tags(htmlspecialchars($_POST['email']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
-// Create the email and send the message
-$to = "Lolincoln23@gmail.com"; 
-$subject = "Website Contact Form:  $name";
-$body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
-$header = "From: Lolincoln23@gmail.com\n";
-$header .= "Reply-To: $email";	
-if(!mail($to, $subject, $body, $header))
-  http_response_code(500);

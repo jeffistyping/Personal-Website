@@ -1,10 +1,23 @@
+hr.code-dark,
+hr.line-light,
+hr.line2-light {
+  padding: 0;
+  text-align: center;
+  margin: 2.5rem auto
+}
+
 body {
   font-family: Lato
+}
+
+html{
+  zoom: 0.9;
 }
 
 #typed {
   display: inline
 }
+
 
 h1,
 h2,
@@ -18,69 +31,50 @@ h6 {
 
 hr.code-dark {
   max-width: 25rem;
-  padding: 0;
-  text-align: center;
   border: none;
-  border-top: solid .25rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  margin-left: auto;
-  margin-right: auto
+  border-top: solid .25rem
 }
 
 hr.line-light {
   max-width: 60rem;
-  padding: 0;
-  text-align: center;
   border: none;
-  border-top: solid .25rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  margin-left: auto;
-  margin-right: auto
+  border-top: solid .25rem
 }
 
 hr.line2-light {
   max-width: 20rem;
-  padding: 0;
-  text-align: center;
   border: none;
-  border-top: solid .25rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  margin-left: auto;
-  margin-right: auto
+  border-top: solid .25rem
+}
+
+hr.code-dark:after,
+hr.finisher:after {
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  top: -.8em;
+  display: inline-block;
+  padding: 0 .25em;
+  font-size: 2em;
+  position: relative
 }
 
 hr.code-dark:after {
   content: "\f121";
-  font-family: 'Font Awesome\ 5 Free';
-  font-weight: 900;
-  position: relative;
-  top: -.8em;
-  display: inline-block;
-  padding: 0 .25em;
-  font-size: 2em
+  color: #2c3e50;
+  background-color: #e0e0e0
+}
+
+#mainNav .navbar-brand,
+#mainNav .navbar-nav li.nav-item a.nav-link {
+  color: #e0e0e0
 }
 
 hr.finisher:after {
-  content: "\f091";
-  font-family: 'Font Awesome\ 5 Free';
-  font-weight: 900;
-  position: relative;
-  top: -.8em;
-  display: inline-block;
-  padding: 0 .25em;
-  font-size: 2em
+  content: "\f091"
 }
 
 hr.code-dark {
   border-color: #2c3e50
-}
-
-hr.code-dark:after {
-  color: #2c3e50;
-  background-color: #e0e0e0
 }
 
 section {
@@ -132,35 +126,34 @@ section h2 {
   font-family: Montserrat
 }
 
-#mainNav .navbar-brand {
-  color: #e0e0e0
-}
-
 #mainNav .navbar-nav {
   margin-top: 1rem;
   letter-spacing: .0625rem
 }
 
-#mainNav .navbar-nav li.nav-item a.nav-link {
-  color: #e0e0e0
-}
-
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #2c3e50
+  color: #a0a0a0
 }
 
+#mainNav .navbar-nav li.nav-item a.nav-link.active,
 #mainNav .navbar-nav li.nav-item a.nav-link:active,
 #mainNav .navbar-nav li.nav-item a.nav-link:focus {
-  color: #e0e0e0
-}
-
-#mainNav .navbar-nav li.nav-item a.nav-link.active {
   color: #e0e0e0
 }
 
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: .8rem
+}
+
+a.color-hover:hover {
+  color: #a0a0a0 !important;
+  text-decoration: none
+}
+
+a.color-hover:visited {
+  color: #2c3e50;
+  text-decoration: none
 }
 
 @media (min-width:992px) {
@@ -180,15 +173,12 @@ section h2 {
   #mainNav .navbar-nav {
     margin-top: 0
   }
-  #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
-    color: #e0e0e0;
-    background: #435e85
-  }
+  #mainNav .navbar-nav>li.nav-item>a.nav-link.active,
   #mainNav .navbar-nav>li.nav-item>a.nav-link.active:active,
   #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus,
   #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
     color: #e0e0e0;
-    background: #435e85
+    background: #2c3e50
   }
   #mainNav.navbar-shrink {
     padding-top: .5rem;
@@ -404,11 +394,7 @@ a:hover {
   color: #2c3e50 !important
 }
 
-.btn-primary {
-  background-color: #435e85;
-  border-color: #435e85
-}
-
+.btn-primary,
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
