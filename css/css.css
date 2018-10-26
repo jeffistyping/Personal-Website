@@ -10,14 +10,13 @@ body {
   font-family: Lato
 }
 
-html{
-  zoom: 0.9;
+html {
+  zoom: 0.88 !important;
 }
 
 #typed {
   display: inline
 }
-
 
 h1,
 h2,
@@ -375,11 +374,11 @@ a:hover {
 }
 
 .bg-primary {
-  background-image: url(../img/portfolio/Mountains.jpg) !important
+  background-image: url(../img/portfolio/ProfileBackGround.webp) !important
 }
 
 .bg-primary2 {
-  background-image: url(../img/portfolio/NightSky.jpg) !important
+  background-image: url(../img/portfolio/NightSKy.webp) !important
 }
 
 .bg-secondary {

@@ -94,7 +94,7 @@
       var answer = x === 0 ? 0 : x === 1 ? 1 : x < 0.5 ?
         pow( 2, 20 * x - 10 ) / 2 :
         ( 2 - pow( 2, -20 * x + 10 ) ) / 2;
-        return answer * 0.9;
+        return answer * 0.88;
     },
     easeInCirc: function (x) {
       return 1 - sqrt(1 - pow(x, 2))

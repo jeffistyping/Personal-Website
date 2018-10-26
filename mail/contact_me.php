@@ -7,33 +7,40 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 
+if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    http_response_code(500);
+    exit();
+  }
+
+  echo var_dump($_SERVER['ENV'], $_SERVER['BASE']);
+
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
     //Server settings
-    // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
-    // $mail->isSMTP();                                      // Set mailer to use SMTP
-    // $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
-    // $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    // $mail->Username = 'user@example.com';                 // SMTP username
-    // $mail->Password = 'secret';                           // SMTP password
+    $mail->SMTPDebug = 1;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'email-smtp.us-east-1.amazonaws.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'AKIAJEPXLBCMVSP7QTIQ';              // SMTP username
+    $mail->Password = 'AgB5rwLhhi8wifCtyutC6NVEa69eHUH9xED4d/HIUebK';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
+    $name = strip_tags(htmlspecialchars($_POST['name']));
+    $email = strip_tags(htmlspecialchars($_POST['email']));
+    $phone = strip_tags(htmlspecialchars($_POST['phone']));
+    $message = strip_tags(htmlspecialchars($_POST['message'])); 
+    
     //Recipients
-    $mail->setFrom('Lolincoln23@gmail.com', 'Personal Website');
-    $mail->addAddress('Lolincoln23@gmail.com');     // Add a recipient
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
+    $mail->setFrom('Lolincoln23@gmail.com', $name);
+    $mail->addAddress('Lolincoln23@gmail.com', 'Name');     // Add a recipient
 
-    //Attachments
-    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
-    $body = '<p><strong>This is my first</strong> Php mailer</p>';
+
+    $body = "You have received a new message from your website contact form"."Here are the details:<br> Name: $name<br> Email: $email<br> Phone: $phone <br> Message: $message";
     //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Here is the subject';
+    $mail->isHTML(true);    
+    $mail->Subject = "Website Contact Form:  $name";
     $mail->Body    = $body;
     $mail->AltBody = strip_tags($body);
 
@@ -41,4 +48,6 @@ try {
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+    http_response_code(500);
+    exit();
 }
