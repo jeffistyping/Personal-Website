@@ -14,6 +14,23 @@ html {
     zoom: .88 !important
 }
 
+#particles-js {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+}
+
+
+.temp {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
 #typed {
     display: inline
 }
@@ -35,7 +52,7 @@ hr.code-dark {
 }
 
 hr.line-light {
-    max-width: 60rem;
+    max-width: 50rem;
     border: none;
     border-top: solid .25rem
 }
@@ -193,10 +210,6 @@ a.color-hover:visited {
     }
 }
 
-header.masthead {
-    padding-top: calc(6rem + 72px);
-    padding-bottom: 6rem
-}
 
 header.masthead h1 {
     font-size: 3rem;
@@ -383,12 +396,14 @@ a:hover {
 }
 
 .bg-primary {
-    background-color: 	 	#808080 !important;
-    background-image: url(../img/portfolio/ProfileBackGround.webp) !important;
+    background-color: black !important;
+    /* background-image: url(../img/portfolio/ProfileBackGround.webp) !important; */
 }
 
 .bg-primary2 {
-    background-image: url(../img/portfolio/NightSKy.webp) !important
+    background-image: linear-gradient(to bottom right,
+    #0e0547
+    ,#656466);
 }
 
 .bg-secondary {

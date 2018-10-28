@@ -66,15 +66,41 @@
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container">
+    <header id="particles-js" class="bg-primary text-white text-center">
+        <div  class="container temp">
             <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
             <h1 class="text-uppercase mb-0"> Hi, nice to meet you!</h1>
             <hr class="line-light">
             <h2 id="typed" class="font-weight-light mb-0"></h2>
         </div>
     </header>
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        particlesJS.load('particles-js', 'css/particles.json', function(){
+              console.log('particles.json loaded...');
+            });
+          </script>
+    <!-- Header -->
+    <!-- <header class="masthead bg-primary text-white text-center">
+        <div id="particles-js">
+            <div class="container">
+                <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+                <h1 class="text-uppercase mb-0"> Hi, nice to meet you!</h1>
+                <hr class="line-light">
+                <h2 id="typed" class="font-weight-light mb-0"></h2>
+            </div>
+        </div>
+        </header>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+      particlesJS.load('particles-js', 'css/particles.json', function(){
+        console.log('particles.json loaded...');
+      });
+    </script> -->
 
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="project">
@@ -503,6 +529,9 @@ I have experience creating server-side Node applications, Java APIs, multiple an
                 console.error(error);
             });
     </script>
+
+    <!-- Particle.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <!-- Typed.js-->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="js/type.min.js"></script>
@@ -526,6 +555,8 @@ I have experience creating server-side Node applications, Java APIs, multiple an
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.min.js"></script>
     <script src="js/contact_me.min.js"></script>
+
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127430490-1"></script>
